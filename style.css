@@ -31,7 +31,7 @@ nav a:hover {
     flex-direction: column;
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 6;
+    aspect-ratio: 16 / 5;
     background: url('layout-01-assets/img11.jpg') center/cover no-repeat;
     background-size: 100%;
     align-items: center;
@@ -46,7 +46,7 @@ nav a:hover {
 .hero h1 {
     font-weight: lighter;
     font-size: 50px;
-    text-shadow: 4px 4px 1px black;
+    text-shadow: 3px 3px 1px black;
     margin-bottom: 0px;
 }
 
@@ -69,14 +69,12 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     padding-bottom: 5%;
-    gap: 0px;
     background-color: gainsboro;
     min-height: 500px;
     grid-column: span 2;
 }
 
 .headline img {
-    width: 100%;
     height: auto;
     object-fit: cover;
 }
@@ -87,43 +85,40 @@ nav a:hover {
 }
 
 .headline h3 {
-    font-size: 25px;
+    font-size: 20px;
+    color: rgb(94, 94, 94);
 }
 
 .headline .textGroup, .headline p {
     font-size: 0.9rem;
-    overflow: hidden;
+    color: rgba(115, 115, 115, 0.985);
 }
 
 .headline a {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 4%;
+  padding-bottom: 4%;
   text-decoration: none;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 5px;
   align-self: center;
 }
 
 .headline:first-child h3 {
-    color:  rgb(45, 102, 26);
+    color:  rgb(56, 131, 31);
 }
 
 .headline:first-child a {
-    background-color: rgb(45, 102, 26);
+    background-color: rgb(56, 131, 31);
 }
 
 .headline:nth-child(2) h3 {
-    color:  rgb(0, 214, 225);
+    color:  rgb(44, 142, 241);
 }
 
 .headline:nth-child(2) a {
-    background-color: rgb(0, 214, 225);
-}
-
-.headline:nth-child(3) h3 {
-    color:  rgb(190, 0, 0);
+    background-color: rgb(44, 142, 241);
 }
 
 .headline:nth-child(3) a {
@@ -134,25 +129,25 @@ nav a:hover {
     background-color: aliceblue;
     border: 1px solid black;
     color: rgb(44, 44, 44);
-    align-self: flex-end;
     float: right;
     margin-right: 20px;
+    margin-bottom: 0%;
 }
 
 .headline:nth-child(4) h3, .headline:nth-child(5) h3 {
-    justify-self: center;   
+    text-align: center; 
 }
 
 .headline:nth-child(4) {
     grid-row-start: 2;
     grid-column: 1 / 4;
-    height: 655px;
+    min-height: 635px;
 }
 
 .headline:nth-child(5) {
     grid-row-start: 2;
     grid-column: 4 / 7;
-    height: 655px;
+    min-height: 635px;
 }
 
 .servicesHeader {
@@ -185,18 +180,19 @@ nav a:hover {
 .columnCards {
     display: grid;
     grid: 1fr 1fr / repeat(4,1fr);
-    gap: 5px;
+    column-gap: 10px;
     margin-left: 20%;
     margin-right: 20%;
     align-items: center;
     align-content: center;
+
+    margin-bottom: 50px;
 }
 
 .columnBox {
     display: flex;
     flex-direction: column;
     background-color: gainsboro;
-    border-radius: 10px;
     min-height: 700px;
 }
 
@@ -208,7 +204,8 @@ nav a:hover {
 
 .columnBox p, .columnBox h3 {
     padding-left: 5%;
-    padding-right: 5%
+    padding-right: 5%;
+    color: rgb(94, 94, 94);
 }
 
 .columnBox a {
@@ -224,24 +221,36 @@ nav a:hover {
 
 .columnBox p {
     font-size: 0.9rem;
+    color: rgba(115, 115, 115, 0.985);
+}
+
+.columnBox:not(:last-child) h3 {
+    text-align: center;
 }
 
 .columnBox:last-child {
     grid-column: span 4;
-    padding-bottom: 50px;
-    min-height: 300px;
+    min-height: 100px;
+    margin-bottom: 0%;
 }
 
 .columnBox a {
-    background-color: aliceblue;
+    width: 40%;
+    height: 20%;
+    background-color: rgb(250, 253, 255);
     border: 1px solid black;
     color: rgb(44, 44, 44);
     place-self: center;
+    text-align: center;
+    line-height: 30px;
 }
 
 .columnBox:last-child a {
     align-self: flex-start;
     margin-left: 5%;
+    width: 80px;
+    height: 20px;
+    line-height: 20px;
 }
 
 .contact { 
@@ -251,34 +260,87 @@ nav a:hover {
     text-align: center;
     border-radius: 4px;
 
-    margin-bottom: 10px;
+    padding: 5%;
+    padding-bottom: 10%;
+}
+
+.contact > * {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.contact h3 {
+    font-weight: lighter;
+    font-size: 35px;
+    text-shadow: 2px 2px 0.5px black;
+    margin-bottom: 50px;
+}
+
+.contact p {
+    background-color: rgba(222, 221, 221, 0.551);
+    padding: 2%;
+    color: black;
+    border-radius: 5px;
 }
 
 .contact form {
     display: grid;
-    gap: 15px;
-    grid: 1fr 1fr 1fr / 1fr 2fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid: 20% 20% 20% 30% / repeat(4, 1fr);
 }
 
-.contact form:nth-child(2) {
+.contact form * {
+    grid-column: span 2;
+    background-color: rgba(222, 221, 221, 0.551);
+    height: 100%;
+    border-radius: 5px;
+    border: 0px;
+
+    text-indent: 10px;
+    line-height: 20px;
+}
+
+.contact form *::placeholder {
+    color: black;
+}
+
+.contact form input:nth-child(2) {
     grid-row-start: 2;
 }
 
-.contact form:nth-child(3) {
+.contact form input:nth-child(3) {
     grid-row-start: 3;
 }
 
-.contact form:last-child {
-    grid-column-start: 2;
+.contact form textarea {
+    grid-column: span 2;
+    grid-row: span 3;
 }
 
-.contact *:not(h3) {
-    padding: 1%;
+.contact form button {
+    grid-area: 4 / 3 / 4 / 4;
+    text-indent: 0%;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
 }
 
 footer { 
     text-align: center;
     font-style: italic;
+
+    color: rgb(146, 146, 146);
+}
+
+footer h2 {
+    color: rgb(88, 88, 88);
+    font-size: 35px;
+    font-weight: 200;
+}
+
+footer p:nth-child(2) {
+    margin-bottom: 5%;
 }
 
 footer:last-child {
