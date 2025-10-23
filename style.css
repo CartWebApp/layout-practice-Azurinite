@@ -1,5 +1,5 @@
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif; 
    margin: 0;
    padding: 0;
 }
@@ -9,21 +9,21 @@ nav {
     grid-auto-flow: column;
     gap: 10px;
     justify-content: center;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(56, 63, 76);
     padding: 1rem 1rem;
 }
 
 nav a {
     padding: 1rem;
     border: 1px solid white;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(56, 62, 76);
     
     text-decoration: none;
     color: white;
 }
 
 nav a:hover {
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(73 80 95);
 }
 
 .hero {
@@ -106,23 +106,23 @@ nav a:hover {
 }
 
 .headline:first-child h3 {
-    color:  rgb(56, 131, 31);
+    color:  rgb(23, 138, 39);
 }
 
 .headline:first-child a {
-    background-color: rgb(56, 131, 31);
+    background-color: rgb(23, 138, 39);
 }
 
 .headline:nth-child(2) h3 {
-    color:  rgb(44, 142, 241);
+    color:  rgb(44, 134, 193);
 }
 
 .headline:nth-child(2) a {
-    background-color: rgb(44, 142, 241);
+    background-color: rgb(22, 134, 193);
 }
 
 .headline:nth-child(3) a {
-    background-color: rgb(190, 0, 0);
+    background-color: rgb(133, 36, 6);
 }
 
 .headline:last-child a {
@@ -141,13 +141,13 @@ nav a:hover {
 .headline:nth-child(4) {
     grid-row-start: 2;
     grid-column: 1 / 4;
-    min-height: 635px;
+    min-height: 745px;
 }
 
 .headline:nth-child(5) {
     grid-row-start: 2;
     grid-column: 4 / 7;
-    min-height: 635px;
+    min-height: 745px;
 }
 
 .servicesHeader {
@@ -181,6 +181,7 @@ nav a:hover {
     display: grid;
     grid: 1fr 1fr / repeat(4,1fr);
     column-gap: 10px;
+    row-gap: 5px;
     margin-left: 20%;
     margin-right: 20%;
     align-items: center;
@@ -193,7 +194,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     background-color: gainsboro;
-    min-height: 700px;
+    min-height: 745px;
 }
 
 .columnBox img {
@@ -208,17 +209,6 @@ nav a:hover {
     color: rgb(94, 94, 94);
 }
 
-.columnBox a {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  text-decoration: none;
-  color: #fff;
-  margin-bottom: 5%;
-  border-radius: 8px;
-}
-
 .columnBox p {
     font-size: 0.9rem;
     color: rgba(115, 115, 115, 0.985);
@@ -231,25 +221,33 @@ nav a:hover {
 .columnBox:last-child {
     grid-column: span 4;
     min-height: 100px;
-    margin-bottom: 0%;
 }
 
 .columnBox a {
-    width: 40%;
-    height: 20%;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-decoration: none;
+    margin-bottom: 5%;
+    border-radius: 8px;
+
     background-color: rgb(250, 253, 255);
     border: 1px solid black;
     color: rgb(44, 44, 44);
-    place-self: center;
+    align-self: center;
     text-align: center;
     line-height: 30px;
 }
 
 .columnBox:last-child a {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
     align-self: flex-start;
     margin-left: 5%;
-    width: 80px;
-    height: 20px;
     line-height: 20px;
 }
 
@@ -287,11 +285,11 @@ nav a:hover {
     display: grid;
     row-gap: 20px;
     column-gap: 20px;
-    grid: 20% 20% 20% 30% / repeat(4, 1fr);
+    grid: 20% 20% 20% 30% / repeat(6, 1fr);
 }
 
 .contact form * {
-    grid-column: span 2;
+    grid-column: span 3;
     background-color: rgba(222, 221, 221, 0.551);
     height: 100%;
     border-radius: 5px;
@@ -314,16 +312,16 @@ nav a:hover {
 }
 
 .contact form textarea {
-    grid-column: span 2;
     grid-row: span 3;
 }
 
 .contact form button {
-    grid-area: 4 / 3 / 4 / 4;
+    grid-area: 4 / 4 / 4 / 5;
     text-indent: 0%;
     background-color: black;
     color: white;
     border: 1px solid white;
+    font-size: 25px;
 }
 
 footer { 
